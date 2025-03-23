@@ -1,16 +1,10 @@
 const { mergeResolvers } = require('@graphql-tools/merge');
-
+const queries = require("./queryResolver");
 const resolvers = mergeResolvers([
     {
-        // Query: {
-        //     ...betsQueries,
-        // },
-        // Mutation: {
-        //     ...betsMutations,
-        // },
-        // Subscription: {
-        //     ...betsSubscriptions,
-        // },
+        Query: {
+            ...queries,
+        },
     },
 ]);
 

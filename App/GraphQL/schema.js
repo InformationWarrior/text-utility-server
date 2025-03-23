@@ -5,7 +5,7 @@ const resolvers = require('./Resolvers/index');
 
 const schema = makeExecutableSchema({
     typeDefs,
-    // resolvers,
+    resolvers,
 });
 
 module.exports = schema;
