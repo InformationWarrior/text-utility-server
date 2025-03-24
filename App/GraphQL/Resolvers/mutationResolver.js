@@ -1,4 +1,4 @@
-const { convertToUpperCase, convertToLowerCase } = require("../Services/textServices");
+const { convertToUpperCase, convertToLowerCase, clearText } = require("../Services/textServices");
 
 const mutations = {
     convertToUpperCase: async (_, { text }) => {
@@ -6,7 +6,10 @@ const mutations = {
     },
     convertToLowerCase: async (_, { text }) => {
         return convertToLowerCase(text);
-    }
+    },
+    clearText: async () => {
+        return clearText();
+    },
 }
 
 module.exports = mutations;

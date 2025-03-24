@@ -10,5 +10,11 @@ const convertToLowerCase = async (text) => {
     }
     return payload;
 }
+const clearText = async () => {
+    const payload = {
+        text: ""
+    }
+    return payload;
+}
 
-module.exports = { convertToUpperCase, convertToLowerCase };
+module.exports = { convertToUpperCase, convertToLowerCase, clearText };
