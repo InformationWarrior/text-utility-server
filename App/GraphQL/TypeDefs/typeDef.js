@@ -12,6 +12,10 @@ const typeDef = gql`
     clearText: TextPayload!
   }
 
+  extend type Subscription {
+    timerRunning: Timer!  # Accepts a duration parameter
+  }
+
   type Message {
     success: Boolean!
     message: String!
@@ -20,6 +24,10 @@ const typeDef = gql`
   type TextPayload {
     text: String!
   }
+
+  type Timer {
+    timeRemaining: Float!
+  }
 `;
 
-module.exports = typeDef; 
+module.exports = typeDef;
