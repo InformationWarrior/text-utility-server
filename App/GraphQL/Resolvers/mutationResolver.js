@@ -1,4 +1,4 @@
-const { convertToUpperCase, convertToLowerCase, clearText } = require("../Services/textServices");
+const { convertToUpperCase, convertToLowerCase, checkPalindrome, clearText } = require("../Services/textServices");
 
 const mutations = {
     convertToUpperCase: async (_, { text }) => {
@@ -6,6 +6,9 @@ const mutations = {
     },
     convertToLowerCase: async (_, { text }) => {
         return convertToLowerCase(text);
+    },
+    checkPalindrome: async (_, { text }) => {
+        return checkPalindrome(text);
     },
     clearText: async () => {
         return clearText();

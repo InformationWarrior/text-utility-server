@@ -8,6 +8,7 @@ const typeDef = gql`
   extend type Mutation {
     convertToUpperCase(text: String!): TextPayload!
     convertToLowerCase(text: String!): TextPayload!
+    checkPalindrome(text: String!): TextPayload!
     clearText: TextPayload!
   }
 
