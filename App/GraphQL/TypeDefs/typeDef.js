@@ -5,10 +5,19 @@ const typeDef = gql`
     getMessage: Message!
   }
 
+  extend type Mutation {
+    convertToUpperCase(text: String!): TextPayload!
+    convertToLowerCase(text: String!): TextPayload!
+  }
+
   type Message {
     success: Boolean!
     message: String!
   }
+
+  type TextPayload {
+    text: String!
+  }
 `;
 
-module.exports = typeDef;
+module.exports = typeDef; 

@@ -3,8 +3,6 @@ const getMessage = async () => {
         success: true,
         message: "GraphQL integration successful"
     };
-
-    console.log({ request: true, payload: payload })
     return payload;
 }
 
